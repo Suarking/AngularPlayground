@@ -1,0 +1,58 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <p class="font-weight-bold mb-0">{{ empleado }}</p>
+      <p>Nombre: {{ nombre }}</p>
+      <p>Apellido: {{ apellido }}</p>
+      <p>Empresa: {{ empresa }}</p>
+      <p>Edad: {{ edad }}</p>
+      <p>Mayor de edad: {{ edad > 18 ? "Sí" : "No" }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="empresa">Introduce la empresa</label>
+        <input
+          type="text"
+          class="form-control"
+          id="empresa"
+          [(ngModel)]="empresa"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p class="mt-3">{{ registerText }}</p>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="nRegistro"
+          id="registrado"
+          value="si"
+          [checked]="usuRegistrado"
+          (click)="showRegisterAlert($event)"
+        />
+        <label class="form-check-label" for="registrado"
+          >Usuario Registrado</label
+        >
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="nRegistro"
+          id="noRegistrado"
+          value="no"
+          (click)="showRegisterAlert($event)"
+        />
+        <label class="form-check-label" for="noRegistrado"
+          >Usuario No Registrado</label
+        >
+      </div>
+      <p>{{ getRegisteredUser() }}</p>
+    </div>
+  </div>
+</div>
