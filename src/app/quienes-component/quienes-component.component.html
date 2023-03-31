@@ -1,1 +1,25 @@
-<p>quienes-component works!</p>
+<div class="container mt-5">
+  <h1>Personajes de Rick and Morty</h1>
+  <div class="row">
+    <div class="col-lg-3 col-md-6 mb-4" *ngFor="let personaje of data">
+      <div class="card text-white bg-dark">
+        <img
+          [src]="personaje.image"
+          class="card-img-top"
+          alt="{{ personaje.name }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ personaje.name }}</h5>
+          <p class="card-text">ID: {{ personaje.id }}</p>
+          <p class="card-text">Estado: {{ personaje.status }}</p>
+          <p class="card-text">Especie: {{ personaje.species }}</p>
+          <p class="card-text">Género: {{ personaje.gender }}</p>
+          <p class="card-text">Origen: {{ personaje.origin.name }}</p>
+          <p class="card-text">Ubicación: {{ personaje.location.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<br />
