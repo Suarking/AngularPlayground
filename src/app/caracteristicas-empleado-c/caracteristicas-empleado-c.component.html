@@ -1,9 +1,15 @@
 <label>Característica:</label>
-<input type="text" id="item-input" #nuevaCaracteristica />
+<input
+  type="text"
+  style="margin-left: 10px"
+  id="item-input"
+  #nuevaCaracteristica
+/>
 <button
   type="button"
   (click)="agregaCaracteristicas(nuevaCaracteristica.value)"
-  class="btn btn-primary"
+  class="btn btn-dark"
+  style="margin-left: 10px"
 >
   Añadir característica
 </button>

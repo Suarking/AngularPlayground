@@ -5,6 +5,12 @@
       {{ empleadoDeLista.apellido }}
       {{ empleadoDeLista.cargo }}
       {{ empleadoDeLista.salario }}
+      <a [routerLink]="['/actualiza', indice]" [queryParams]="{ accion: '1' }">
+        Actualizar
+      </a>
+      <a [routerLink]="['/actualiza', indice]" [queryParams]="{ accion: '2' }">
+        Eliminar
+      </a>
     </div>
     <app-caracteristicas-empleado-c
       (caracteristicasEmpleado)="agregarCaracteristica($event)"

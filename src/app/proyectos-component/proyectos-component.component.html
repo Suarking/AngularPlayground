@@ -1,0 +1,60 @@
+<main role="main" class="container mt-5">
+  <div class="col-sm-12" style="text-align: center">
+    <h1>{{ title }}</h1>
+  </div>
+  <br />
+  <br />
+  <form class="form-group row">
+    <div class="form-group col-md-3">
+      <label for="nombre">Nombre:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        name="nombre"
+        [(ngModel)]="cuadroNombre"
+      />
+    </div>
+    <div class="form-group col-md-3">
+      <label for="apellido">Apellido:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="apellido"
+        name="apellido"
+        [(ngModel)]="cuadroApellido"
+      />
+    </div>
+    <div class="form-group col-md-3">
+      <label for="cargo">Cargo:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cargo"
+        name="cargo"
+        [(ngModel)]="cuadroCargo"
+      />
+    </div>
+    <div class="form-group col-md-3">
+      <label for="salario">Salario:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="salario"
+        name="salario"
+        [(ngModel)]="cuadroSalario"
+      />
+    </div>
+    <div class="col-md-3">
+      <br />
+      <button type="submit" class="btn btn-primary" (click)="agregarEmpleado()">
+        Agregar
+      </button>
+    </div>
+  </form>
+  <br />
+</main>
+
+<div style="text-align: center">
+  <button class="btn btn-primary" (click)="volverHome()">Volver</button>
+</div>
