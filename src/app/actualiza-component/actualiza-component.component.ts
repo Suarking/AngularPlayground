@@ -25,7 +25,7 @@ export class ActualizaComponentComponent implements OnInit {
     if (this.accion == 1) {
       this.title = 'Actualizar Empleado';
     } else if (this.accion == 2) {
-      this.title = 'Eliminar Empleado';
+      this.title = 'Eliminar ';
     }
 
     this.empleados = this.empleadosService.empleados;
