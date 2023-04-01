@@ -20,4 +20,10 @@ export class QuienesComponentComponent implements OnInit {
       this.data = data;
     });
   }
+
+  fetchDataFirstTen() {
+    this.apiService.getDataFirstTen().subscribe((data) => {
+      this.data = data;
+    });
+  }
 }

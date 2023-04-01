@@ -16,6 +16,7 @@ import { ContactoComponentComponent } from './contacto-component/contacto-compon
 import { RouterModule, Routes } from '@angular/router';
 import { ActualizaComponentComponent } from './actualiza-component/actualiza-component.component';
 import { ErrorPersonalizadoComponent } from './error-personalizado/error-personalizado.component';
+import { RickApiConsumerService } from './rick-api-consumer.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponentComponent },
@@ -45,7 +46,11 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
   ],
-  providers: [ServicioEmpleadosService, EmpleadosService],
+  providers: [
+    ServicioEmpleadosService,
+    EmpleadosService,
+    RickApiConsumerService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
