@@ -11,7 +11,7 @@ import { ServicioEmpleadosService } from './servicio-empleados.service';
 import { EmpleadosService } from './empleados.service';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { ProyectosComponentComponent } from './proyectos-component/proyectos-component.component';
-import { QuienesComponentComponent } from './quienes-component/quienes-component.component';
+import { ApiConsumeComponentComponent } from './api-consume-component/api-consume-component.component';
 import { ContactoComponentComponent } from './contacto-component/contacto-component.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ActualizaComponentComponent } from './actualiza-component/actualiza-component.component';
@@ -21,7 +21,7 @@ import { RickApiConsumerService } from './rick-api-consumer.service';
 const appRoutes: Routes = [
   { path: '', component: HomeComponentComponent },
   { path: 'proyectos', component: ProyectosComponentComponent },
-  { path: 'quienes', component: QuienesComponentComponent },
+  { path: 'apiconsume', component: ApiConsumeComponentComponent },
   { path: 'contacto', component: ContactoComponentComponent },
   { path: 'actualiza/:id', component: ActualizaComponentComponent },
   { path: '**', component: ErrorPersonalizadoComponent },
@@ -36,7 +36,7 @@ const appRoutes: Routes = [
     CaracteristicasEmpleadoCComponent,
     HomeComponentComponent,
     ProyectosComponentComponent,
-    QuienesComponentComponent,
+    ApiConsumeComponentComponent,
     ContactoComponentComponent,
     ActualizaComponentComponent,
   ],
