@@ -1,16 +1,25 @@
 <div class="row">
   <div class="col-md-6 col-sm-12">
-    <div>
+    <div style="font-weight: bold">
       {{ indice + 1 }} {{ empleadoDeLista.nombre }}
       {{ empleadoDeLista.apellido }}
       {{ empleadoDeLista.cargo }}
       {{ empleadoDeLista.salario }}
-      <a [routerLink]="['/actualiza', indice]" [queryParams]="{ accion: '1' }">
+      <button
+        class="btn btn-primary"
+        style="margin-right: 5px"
+        [routerLink]="['/actualiza', indice]"
+        [queryParams]="{ accion: '1' }"
+      >
         Actualizar
-      </a>
-      <a [routerLink]="['/actualiza', indice]" [queryParams]="{ accion: '2' }">
+      </button>
+      <button
+        class="btn btn-danger"
+        [routerLink]="['/actualiza', indice]"
+        [queryParams]="{ accion: '2' }"
+      >
         Eliminar
-      </a>
+      </button>
     </div>
     <app-caracteristicas-empleado-c
       (caracteristicasEmpleado)="agregarCaracteristica($event)"
